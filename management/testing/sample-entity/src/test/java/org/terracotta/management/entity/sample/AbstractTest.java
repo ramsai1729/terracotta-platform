@@ -94,12 +94,8 @@ public abstract class AbstractTest {
       server.registerClientEntityService(new NmsEntityClientService());
       server.registerServerEntityService(new NmsEntityServerService());
 
-      OffheapResourcesType resources = new OffheapResourcesType();
-      ResourceType resource = new ResourceType();
-      resource.setName("primary-server-resource");
-      resource.setUnit(MemoryUnit.MB);
-      resource.setValue(BigInteger.valueOf(32));
-      resources.getResource().add(resource);
+      Map<String, Long> resources = new HashMap<>();
+      resources.put("primary-server-resource", 32L * 1024 * 1024);
       server.registerExtendedConfiguration(new OffHeapResourcesProvider(resources));
     });
 

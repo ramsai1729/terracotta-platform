@@ -33,9 +33,9 @@ import org.w3c.dom.Document;
 import static org.hamcrest.core.Is.is;
 import org.junit.Assert;
 import static org.junit.Assert.assertThat;
+import static org.terracotta.offheapresource.OffHeapResourceConfigurationParser.convert;
+import static org.terracotta.offheapresource.OffHeapResourceConfigurationParser.longValueExact;
 import static org.terracotta.offheapresource.OffHeapResourceIdentifier.identifier;
-import static org.terracotta.offheapresource.OffHeapResourcesProvider.convert;
-import static org.terracotta.offheapresource.OffHeapResourcesProvider.longValueExact;
 
 /**
  *
